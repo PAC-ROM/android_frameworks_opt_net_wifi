@@ -214,8 +214,6 @@ public class WifiStateMachine extends StateMachine implements WifiNative.WifiPno
 
     private boolean mScreenOn = false;
 
-    private boolean mIsWiFiIpReachabilityEnabled ;
-
     /* Chipset supports background scan */
     private final boolean mBackgroundScanSupported;
 
@@ -1205,9 +1203,6 @@ public class WifiStateMachine extends StateMachine implements WifiNative.WifiPno
 
         mBackgroundScanSupported = mContext.getResources().getBoolean(
                 R.bool.config_wifi_background_scan_support);
-
-        mIsWiFiIpReachabilityEnabled = mContext.getResources().getBoolean(
-                R.bool.config_wifi_ipreachability_monitor);
 
         mPrimaryDeviceType = mContext.getResources().getString(
                 R.string.config_wifi_p2p_device_type);
